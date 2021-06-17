@@ -1,18 +1,18 @@
 version: '3.3'
 services:
   server:
-    image: node:12-alpine
+    container_name: backend
+    build: ./backend/
     ports:
-      - '8080:80'
+      - "8080:80"
     volumes:
       - ./server:/root/server
     env_file:
       - ./deploy/server.env
     entrypoint: sh /root/server/start_server.sh
   frontend:
-    build:
-      context: ./deploy
-      dockerfile: Dockerfile
+
+    build: ./deploy
     ports:
       - '80:80'
       - '443:443'
