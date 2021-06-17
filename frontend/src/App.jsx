@@ -5,7 +5,7 @@ const Posts = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch('/api/posts')
+    fetch('/weatherforecast')
       .then((response) => response.json())
       .then((json) => {
         setPosts(json);
