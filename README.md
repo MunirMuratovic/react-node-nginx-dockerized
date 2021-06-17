@@ -32,7 +32,7 @@ server {
         listen [::]:80 default_server;
         root /var/www/html;
         index index.html index.htm index.nginx-debian.html;
-        server_name domain.com www.domain.com;
+        server_name meetnet.net www.meetnet.net;
         location / {
             root /var/www/html;
             try_files $uri /index.html;
@@ -79,5 +79,5 @@ services:
 ```bash
 docker-compose up -d
 docker exec -it <frontend_container> bash       # bash into the nginx container
-certbot --nginx -d domain.com -d www.domain.com    # setup SSL certificate
+certbot --nginx -d meetnet.net -d www.meetnet.net    # setup SSL certificate
 ```
