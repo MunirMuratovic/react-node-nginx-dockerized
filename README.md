@@ -1,4 +1,4 @@
-# Meetnet.net (React + Nginx + ASP.NET Core WEB API)
+# React + Nginx + ASP.NET Core WEB API
 
 NOTE: Before docker-compose up, please go to frontend, npm install then npm run build, then remove node_modules folder! (rm -r node_modules/)
 
@@ -79,5 +79,5 @@ services:
 ```bash
 docker-compose up -d
 docker exec -it <frontend_container> bash       # bash into the nginx container
-certbot --nginx -d meetnet.net -d www.meetnet.net    # setup SSL certificate
+certbot --nginx -d <your-website.com> -d <www.your-website.com>    # setup SSL certificate
 ```
